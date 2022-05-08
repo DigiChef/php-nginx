@@ -3,7 +3,7 @@
 ########################################
 
 ###
-# Base PHP Image with Apache
+# Base PHP Image with Nginx
 ###
 FROM php:8.1-fpm-bullseye
 
@@ -83,7 +83,7 @@ COPY config/php/php.ini /usr/local/etc/php/php.ini
 COPY etc/php/fpm/pool.d/ /usr/local/etc/php-fpm.d/
 COPY config/php/conf.d/*.ini /usr/local/etc/php/conf.d/
 
-#NGINX: Set server configs
+# Copy NGINX configurations
 COPY etc/nginx/ /etc/nginx/
 
 # Set the working directory
